@@ -7,9 +7,11 @@ body {
   color: gray;
 }
 
-/*p {
-  font-size:
-}*/
+footer p {
+  font-size: 20px;
+  color: #E895C9;
+}
+
 #site-header {
   padding: 20px 0;
   margin-bottom: 20px;
