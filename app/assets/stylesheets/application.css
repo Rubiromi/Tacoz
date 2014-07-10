@@ -4,7 +4,25 @@
  */
 
 body {
-  color: gray;
+  color: #113B17;
+  background-color: #A9CFAF;
+}
+
+a {
+  color: white;
+}
+
+.logo {
+  margin-top: -15px;
+}
+
+/*nav {
+  background-color: #FAFA55;
+}*/
+
+.navbar-default a {
+  color: #113B17;
+  font-size: 15px;
 }
 
 footer p {

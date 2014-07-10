@@ -1,9 +1,6 @@
-<h1 class="page-header">Menu</h1>
-<p class="lead">
-  Tacos so yummy, you'll slap yo mama!
-</p>
+<h1> Admin/Menu Items index </h1>
 
-<% @items.in_groups_of(4) do |group| %>
+<% @menu_items.in_groups_of(4) do |group| %>
   <div class="row">
     <% group.each do |menu_item| %>
       <div class="col-sm-3">
@@ -16,7 +13,7 @@
             <p><%= number_to_currency(menu_item.price)%></p>
           </div>
           <div class="panel-footer text-center">
-            <%= link_to('See More', menu_item_path(menu_item), class: 'btn btn-success') %>
+            <%= link_to('See More', admin_menu_item_path(menu_item), class: 'btn btn-success') %>
           </div>
         </div>
       </div>
@@ -24,5 +21,5 @@
   </div>
 <% end %>
 <div class="paginate">
-  <%= paginate(@items) %>
+  <%= paginate(@menu_items) %>
 </div>

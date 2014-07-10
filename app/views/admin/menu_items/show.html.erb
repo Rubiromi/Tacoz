@@ -1,0 +1,13 @@
+<h1><b><%= @menu_item.name %></b></h1>
+
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$<%= @menu_item.price %></h2>
+
+<p><%= @menu_item.description %></p>
+
+<button type="button" class="btn btn-primary" >
+<%= link_to 'Edit Menu Item', edit_admin_menu_item_path %>
+</button>
+
+<button type="button" class="btn btn-danger" >
+<%= link_to 'Destroy Menu Item', [:admin, @menu_item], method: :delete %>
+</button>
