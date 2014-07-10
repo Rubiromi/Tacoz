@@ -10,6 +10,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'font-awesome-sass'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+# for pagination
+gem 'kaminari'
 gem 'mini_magick'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
