@@ -14,7 +14,6 @@ class Admin::MenuItemsController < AdminController
 
   def create
     @menu_item = MenuItem.new(menu_item_params)
-
     if @menu_item.save
       redirect_to admin_menu_items_path
     else
@@ -28,7 +27,6 @@ class Admin::MenuItemsController < AdminController
 
   def update
     @menu_item = MenuItem.find(params[:id])
-
     if @menu_item.update_attributes(menu_item_params)
       redirect_to admin_menu_items_path
     else

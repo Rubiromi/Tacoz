@@ -1,8 +1,9 @@
 <h1> Admin/Menu Items index </h1>
 
-<% @menu_items.in_groups_of(4) do |group| %>
+<% @menu_items.in_groups_of(4, false) do |group| %>
   <div class="row">
     <% group.each do |menu_item| %>
+      <% next if menu_item.nil? %>
       <div class="col-sm-3">
         <div class="panel">
           <div class="panel-header">
@@ -10,7 +11,7 @@
           </div>
           <div class="panel-body">
             <h3><%= menu_item.name %></h3>
-            <p><%= number_to_currency(menu_item.price)%></p>
+            <p><%= number_to_currency(menu_item.price) %></p>
           </div>
           <div class="panel-footer text-center">
             <%= link_to('See More', admin_menu_item_path(menu_item), class: 'btn btn-success') %>
