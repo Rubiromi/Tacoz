@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/contact' => 'site#contact'
   post '/contact-submit' => 'site#contact_submit', as: :submit_contact
   resources :menu_items, only: [:index, :show], path: 'our-food' #we don't want all 7 routes. we just need these two.
+  resources :locations, only: [:index, :show]
 
   get '/our-vegetarian-food' => 'menu_items#vegetarian'
 
