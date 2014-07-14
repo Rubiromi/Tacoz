@@ -19,6 +19,7 @@ gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'thin'
 gem 'turbolinks'
+gem 'twitter'
 gem 'uglifier', '>= 1.3.0'
 
 
@@ -30,6 +31,7 @@ end
 
 # Development and Test Gems
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'ffaker'
 end
 
