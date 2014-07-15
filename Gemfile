@@ -15,6 +15,7 @@ gem 'jquery-rails'
 # for pagination
 gem 'kaminari'
 gem 'mini_magick'
+gem 'nested_form'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
 gem 'thin'
