@@ -1,0 +1,15 @@
+<h1>Location Show Page</h1>
+
+<%= @location.street_address %>
+<%= @location.street_address2 %>
+<%= @location.city %>
+<%= @location.state %>
+<%= @location.zip %>
+
+<<button type="button" class="btn btn-primary" >
+<%= link_to 'Edit Location', edit_admin_location_path %>
+</button>
+
+<button type="button" class="btn btn-danger" >
+<%= link_to 'Destroy Location', [:admin, @location], method: :delete %>
+</button>

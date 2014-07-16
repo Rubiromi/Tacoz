@@ -3,7 +3,9 @@ class MenuItem < ActiveRecord::Base
   has_many :ingredients
 
   # We need this for nested forms. This saves ingredients when we save menu item.
-  accepts_nested_attributes_for :ingredients, allow_destroy: true, reject_if: :has_blank_attributes
+  accepts_nested_attributes_for :ingredients,
+                                allow_destroy: true,
+                                reject_if: :has_blank_attributes
 
   after_initialize do
     if ingredients.empty?

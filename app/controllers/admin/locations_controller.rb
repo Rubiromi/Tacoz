@@ -1,5 +1,5 @@
-class LocationsController < ApplicationController
-  before_action :find_location, only: [:edit, :update, :destroy]
+class Admin::LocationsController < ApplicationController
+  # before_action find_location: only: [:edit, :update, :destroy]
 
   def index
     @locations = Location.all
@@ -23,9 +23,11 @@ class LocationsController < ApplicationController
   end
 
   def edit
+    @location = Location.find(params[:id])
   end
 
   def update
+    @location = Location.find(params[:id])
     if @location.update_attributes(location_params)
       redirect_to admin_location_path
     else
@@ -34,6 +36,7 @@ class LocationsController < ApplicationController
   end
 
   def destroy
+    @location = Location.find(params[:id])
     @location.destroy
     redirect_to admin_locations_path
   end
@@ -44,9 +47,7 @@ class LocationsController < ApplicationController
     params.require(:location).permit(:street_address, :street_address2, :city, :state, :zip, employees_attributes: [:id, :destroy, :name, :badge_number])
   end
 
-  def find_location
-    @location = Location.find(params[:id])
-  end
-
-
+  # def find_location
+  #   @location = Location.find(params[:id])
+  # end
 end

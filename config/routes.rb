@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  devise_for :users
   root 'site#index'
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
@@ -13,6 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get '/' => 'base#index'
     resources :menu_items
+    resources :locations
   end
 
 

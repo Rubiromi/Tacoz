@@ -1,0 +1,16 @@
+<h1>Locations</h1>
+<a href="<%= new_admin_location_path %>" class='btn btn-success'>Add new location</a><br>
+
+<% @locations.each do |location| %>
+  <b><%= location.street_address %></b>
+  <b><%= location.street_address2 %></b>
+  <b><%= location.city %></b>
+  <b><%= location.state %></b>
+  <b><%= location.zip %></b>
+  <button type="button" class="btn btn-primary" >
+  <%= link_to 'Edit location', edit_admin_location_path(:id) %>
+  </button>
+  <button type="button" class="btn btn-danger" >
+  <%= link_to 'Destroy location', [:admin, @location], method: :delete %>
+</button><br><br>
+<% end %>
